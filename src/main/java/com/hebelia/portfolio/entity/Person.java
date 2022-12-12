@@ -5,7 +5,9 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.Lob;
+
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 
 
 
@@ -16,16 +18,19 @@ public class Person {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 //    review validator dependency
-//    @NotNull
-//    @Size(min=1, max=50, message="Debe contar con una longitud minima de 1 y maxima de 100 caracteres")
+    @NotNull
+    @Size(min=1, max=50, message="Debe contar con una longitud minima de 1 y maxima de 50 caracteres")
     private String fullname;
+    @NotNull
+    @Size(min=1, max=50, message="Debe contar con una longitud minima de 1 y maxima de 50 caracteres")
     private String  title;
-    @Lob
+
     private String  pfp;
-    @Lob
+
     private String  about;
-    @Lob
+
     private String  banner;
+
     private String  license;
 
     public Person() {
