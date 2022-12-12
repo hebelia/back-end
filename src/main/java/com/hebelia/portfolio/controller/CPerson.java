@@ -1,4 +1,4 @@
-package com.hebelia.portfolio.controller;
+    package com.hebelia.portfolio.controller;
 
 import com.hebelia.portfolio.entity.Person;
 import com.hebelia.portfolio.service.SPerson;
@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,6 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("person") //localhost:8080/person route
 @CrossOrigin(origins = "http://localhost:4200")
 public class CPerson {
+//    alias
     @Autowired
     SPerson perServ;
     
@@ -46,11 +48,34 @@ public class CPerson {
         return "La persona fue eliminada con exito";
     }
     
-//    edit mapping / update mapping
-    @PutMapping("/update")
+    @PutMapping("/edit")
     public String updatePerson(@RequestBody Person per){
         perServ.editPerson(per);
         return "La persona se actualizo con exito";
     }
+
+//    edit mapping / update mapping
+//    @PutMapping("/update/{id}")
+//    public Person updatePerson(@PathVariable Long id,
+//                               @RequestParam("fullname") String newFullname,
+//                               @RequestParam("title") String newTitle,
+//                               @RequestParam("pfp") String newPfp,
+//                               @RequestParam("about") String newAbout,
+//                               @RequestParam("banner") String newBanner,
+//                               @RequestParam("license") String newLicense){
+//        Person per = perServ.findPerson(id);
+//        
+//        per.setFullname(newFullname);
+//        per.setTitle(newTitle);
+//        per.setPfp(newPfp);
+//        per.setAbout(newAbout);
+//        per.setBanner(newBanner);
+//        per.setLicense(newLicense);
+//                 
+//
+//        perServ.editPerson(per);
+//        return per;
+
+//    }
     
 }

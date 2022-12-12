@@ -8,14 +8,17 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Lob;
 
 
+
 @Entity
 
 public class Person {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    
-    private String name;
+//    review validator dependency
+//    @NotNull
+//    @Size(min=1, max=50, message="Debe contar con una longitud minima de 1 y maxima de 100 caracteres")
+    private String fullname;
     private String  title;
     @Lob
     private String  pfp;
@@ -28,8 +31,8 @@ public class Person {
     public Person() {
     }
 
-    public Person(String name, String title, String pfp, String about, String banner, String license) {
-        this.name = name;
+    public Person(String fullname, String title, String pfp, String about, String banner, String license) {
+        this.fullname = fullname;
         this.title = title;
         this.pfp = pfp;
         this.about = about;
@@ -45,12 +48,12 @@ public class Person {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getFullname() {
+        return fullname;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFullname(String fullname) {
+        this.fullname = fullname;
     }
 
     public String getTitle() {
