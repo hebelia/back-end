@@ -1,13 +1,36 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com.hebelia.portfolio.service;
 
-/**
- *
- * @author hebe_
- */
+import com.hebelia.portfolio.entity.Project;
+import com.hebelia.portfolio.repository.RProject;
+import jakarta.transaction.Transactional;
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+@Transactional
 public class SProject {
-    
+      //    alias
+    @Autowired
+    public RProject projRep;
+
+    public List<Project> viewProjects() {
+        List<Project> listProjects= projRep.findAll();
+        return listProjects;
+    }
+        public Project findProject(long id) {
+//        returns null if projson is not found
+          Project proj = projRep.findById(id).orElse(null);
+          return proj;
+    }
+    public void createProject(Project proj) {
+        projRep.save(proj);
+    }
+    public void editProject(Project proj) {
+        projRep.save(proj);
+    }
+    public void deleteProject(long id) {
+        projRep.deleteById(id);
+    }
 }
