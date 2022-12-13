@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -54,28 +53,4 @@ public class CPerson {
         return "La persona se actualizo con exito";
     }
 
-//    edit mapping / update mapping
-//    @PutMapping("/update/{id}")
-//    public Person updatePerson(@PathVariable Long id,
-//                               @RequestParam("fullname") String newFullname,
-//                               @RequestParam("title") String newTitle,
-//                               @RequestParam("pfp") String newPfp,
-//                               @RequestParam("about") String newAbout,
-//                               @RequestParam("banner") String newBanner,
-//                               @RequestParam("license") String newLicense){
-//        Person per = perServ.findPerson(id);
-//        
-//        per.setFullname(newFullname);
-//        per.setTitle(newTitle);
-//        per.setPfp(newPfp);
-//        per.setAbout(newAbout);
-//        per.setBanner(newBanner);
-//        per.setLicense(newLicense);
-//                 
-//
-//        perServ.editPerson(per);
-//        return per;
-
-//    }
-    
 }
