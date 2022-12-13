@@ -39,13 +39,13 @@ public class CCourse {
     @PostMapping("/create")
     public String addCourse (@RequestBody Course cou){
         couServ.createCourse(cou);
-        return "El curso fue creada con exito";
+        return "El curso fue creado con exito";
     }
     
     @DeleteMapping("/delete/{id}")
     public String deleteCourse(@PathVariable long id){
         couServ.deleteCourse(id);
-        return "El curso fue eliminada con exito";
+        return "El curso fue eliminado con exito";
     }
     
     @PutMapping("/edit")

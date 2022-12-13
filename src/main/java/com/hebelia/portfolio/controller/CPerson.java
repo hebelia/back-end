@@ -1,4 +1,4 @@
-    package com.hebelia.portfolio.controller;
+package com.hebelia.portfolio.controller;
 
 import com.hebelia.portfolio.entity.Person;
 import com.hebelia.portfolio.service.SPerson;

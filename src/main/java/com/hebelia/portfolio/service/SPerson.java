@@ -35,12 +35,4 @@ public class SPerson {
         perRep.deleteById(id);
     }
 
-    
-    
-    
-//    putmapping controller review
-//    public void savePerson(Person per) {
-//        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-//    }
-
 }
