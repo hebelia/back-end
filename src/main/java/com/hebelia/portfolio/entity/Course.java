@@ -76,9 +76,5 @@ public class Course {
     public void setEnd(Date end) {
         this.end = end;
     }
-    
-    
-
-    
 
 }

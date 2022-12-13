@@ -1,13 +1,37 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com.hebelia.portfolio.service;
 
-/**
- *
- * @author hebe_
- */
+import com.hebelia.portfolio.entity.Course;
+import com.hebelia.portfolio.repository.RCourse;
+import jakarta.transaction.Transactional;
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+@Transactional
 public class SCourse {
+    //    alias
+    @Autowired
+    public RCourse couRep;
+
+    public List<Course> viewCourses() {
+        List<Course> listCourses= couRep.findAll();
+        return listCourses;
+    }
+        public Course findCourse(long id) {
+//        returns null if cou is not found
+          Course cou = couRep.findById(id).orElse(null);
+          return cou;
+    }
+    public void createCourse(Course cou) {
+        couRep.save(cou);
+    }
+    public void editCourse(Course cou) {
+        couRep.save(cou);
+    }
+    public void deleteCourse(long id) {
+        couRep.deleteById(id);
+    }
     
 }

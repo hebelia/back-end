@@ -1,13 +1,12 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
- */
+
 package com.hebelia.portfolio.repository;
 
-/**
- *
- * @author hebe_
- */
-public interface RCourse {
+import com.hebelia.portfolio.entity.Course;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface RCourse extends JpaRepository <Course, Long>{
     
 }
+
