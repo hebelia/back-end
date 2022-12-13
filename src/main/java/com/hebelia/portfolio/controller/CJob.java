@@ -22,35 +22,35 @@ import org.springframework.web.bind.annotation.RestController;
 public class CJob {
 //    alias
     @Autowired
-    SJob perServ;
+    SJob joServ;
     
     @GetMapping("/list")
     @ResponseBody
     public List <Job> viewJobs(){
-        return perServ.viewJobs();
+        return joServ.viewJobs();
     }
     
     @GetMapping ("/view/{id}") //id is dynamic
     @ResponseBody
     public Job viewJob(@PathVariable long id){
-        return perServ.findJob(id);
+        return joServ.findJob(id);
     }
     
     @PostMapping("/create")
-    public String addJob (@RequestBody Job per){
-        perServ.createJob(per);
+    public String addJob (@RequestBody Job jo){
+        joServ.createJob(jo);
         return "El trabajo fue creado con exito";
     }
     
     @DeleteMapping("/delete/{id}")
     public String deleteJob(@PathVariable long id){
-        perServ.deleteJob(id);
+        joServ.deleteJob(id);
         return "El trabajo fue eliminado con exito";
     }
     
     @PutMapping("/edit")
-    public String updateJob(@RequestBody Job per){
-        perServ.editJob(per);
+    public String updateJob(@RequestBody Job jo){
+        joServ.editJob(jo);
         return "El trabajo se actualizo con exito";
     }
 
