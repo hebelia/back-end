@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-//data skisistence
+
 @Transactional
 public class SSkill {
 
@@ -22,7 +22,7 @@ public class SSkill {
     }
 
     public Skill findSkill(long id) {
-//        returns null if skison is not found
+
         Skill ski = skiRep.findById(id).orElse(null);
         return ski;
     }
@@ -38,5 +38,9 @@ public class SSkill {
     public void deleteSkill(long id) {
         skiRep.deleteById(id);
     }
+        public void updateSkillById(long id, Skill ski){
+        skiRep.save(ski);
+    }
+
 
 }

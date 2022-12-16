@@ -33,5 +33,9 @@ public class SCourse {
     public void deleteCourse(long id) {
         couRep.deleteById(id);
     }
+        public void updateCourseById(long id, Course cou){
+        couRep.save(cou);
+    }
+
     
 }

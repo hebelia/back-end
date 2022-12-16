@@ -20,7 +20,7 @@ public class SProject {
         return listProjects;
     }
         public Project findProject(long id) {
-//        returns null if projson is not found
+
           Project proj = projRep.findById(id).orElse(null);
           return proj;
     }
@@ -33,4 +33,8 @@ public class SProject {
     public void deleteProject(long id) {
         projRep.deleteById(id);
     }
+        public void updateProjectById(long id, Project proj){
+        projRep.save(proj);
+    }
+
 }

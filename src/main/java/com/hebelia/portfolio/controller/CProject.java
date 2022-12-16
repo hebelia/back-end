@@ -54,5 +54,12 @@ public class CProject {
         projServ.editProject(proj);
         return "El proyecto se actualizo con exito";
     }
+        
+    @PutMapping("/edit/{id}")
+    public String updateProjectById(@PathVariable ("id") long id,Project proj){
+    projServ.editProject(proj);
+    return "Los datos se actualizaron con exito";
+    }
+    
     
 }

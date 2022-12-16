@@ -53,5 +53,12 @@ public class CJob {
         joServ.editJob(jo);
         return "El trabajo se actualizo con exito";
     }
+        
+    @PutMapping("/edit/{id}")
+    public String updateJobById(@PathVariable ("id") long id, Job jo){
+    joServ.editJob(jo);
+    return "Los datos se actualizaron con exito";
+    }
+    
 
 }

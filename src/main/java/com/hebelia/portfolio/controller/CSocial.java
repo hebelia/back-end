@@ -1,8 +1,8 @@
 
 package com.hebelia.portfolio.controller;
 
-import com.hebelia.portfolio.entity.Course;
-import com.hebelia.portfolio.service.SCourse;
+import com.hebelia.portfolio.entity.Social;
+import com.hebelia.portfolio.service.SSocial;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -17,46 +17,46 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("course") //localhost:8080/course route
+@RequestMapping("socrse") //localhost:8080/socrse route
 @CrossOrigin(origins = "http://localhost:4200")
-public class CCourse {
+public class CSocial {
     //    alias
     @Autowired
-    SCourse couServ;
+    SSocial socServ;
     
     @GetMapping("/list")
     @ResponseBody
-    public List <Course> viewCourses(){
-        return couServ.viewCourses();
+    public List <Social> viewSocials(){
+        return socServ.viewSocials();
     }
     
     @GetMapping ("/view/{id}") //id is dynamic
     @ResponseBody
-    public Course viewCourse(@PathVariable long id){
-        return couServ.findCourse(id);
+    public Social viewSocial(@PathVariable long id){
+        return socServ.findSocial(id);
     }
     
     @PostMapping("/create")
-    public String addCourse (@RequestBody Course cou){
-        couServ.createCourse(cou);
-        return "El curso fue creado con exito";
+    public String addSocial (@RequestBody Social soc){
+        socServ.createSocial(soc);
+        return "La red social fue creada con exito";
     }
     
     @DeleteMapping("/delete/{id}")
-    public String deleteCourse(@PathVariable long id){
-        couServ.deleteCourse(id);
-        return "El curso fue eliminado con exito";
+    public String deleteSocial(@PathVariable long id){
+        socServ.deleteSocial(id);
+        return "La red social fue eliminada con exito";
     }
     
     @PutMapping("/edit")
-    public String updateCourse(@RequestBody Course cou){
-        couServ.editCourse(cou);
-        return "El curso se actualizo con exito";
+    public String updateSocial(@RequestBody Social soc){
+        socServ.editSocial(soc);
+        return "La red social se actualizo con exito";
     }
         
     @PutMapping("/edit/{id}")
-    public String updateCourseById(@PathVariable ("id") long id, Course cou){
-    couServ.editCourse(cou);
+    public String updateSocialById(@PathVariable ("id") long id, Social soc){
+    socServ.editSocial(soc);
     return "Los datos se actualizaron con exito";
     }
     

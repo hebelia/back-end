@@ -53,4 +53,11 @@ public class CSkill {
         skiServ.editSkill(ski);
         return "La habilidad se actualizo con exito";
     }
+        
+    @PutMapping("/edit/{id}")
+    public String updateSkillById(@PathVariable ("id") long id, Skill ski){
+    skiServ.editSkill(ski);
+    return "Los datos se actualizaron con exito";
+    }
+    
 }

@@ -34,5 +34,9 @@ public class SPerson {
     public void deletePerson(long id) {
         perRep.deleteById(id);
     }
+//    review
+    public void updatePersonById(long id, Person per){
+        perRep.save(per);
+    }
 
 }

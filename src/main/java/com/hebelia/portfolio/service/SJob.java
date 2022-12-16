@@ -20,7 +20,7 @@ public class SJob {
         return listJobs;
     }
         public Job findJob(long id) {
-//        returns null if joson is not found
+
           Job jo = joRep.findById(id).orElse(null);
           return jo;
     }
@@ -33,5 +33,9 @@ public class SJob {
     public void deleteJob(long id) {
         joRep.deleteById(id);
     }
+        public void updateJobById(long id, Job jo){
+        joRep.save(jo);
+    }
+
 
 }

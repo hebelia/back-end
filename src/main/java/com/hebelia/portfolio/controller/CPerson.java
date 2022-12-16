@@ -52,5 +52,11 @@ public class CPerson {
         perServ.editPerson(per);
         return "La persona se actualizo con exito";
     }
-
+//    review
+    @PutMapping("/edit/{id}")
+    public String updatePersonById(@PathVariable ("id") long id, Person per){
+    perServ.editPerson(per);
+    return "Los datos se actualizaron con exito";
+    }
+    
 }

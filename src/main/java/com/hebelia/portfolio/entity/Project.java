@@ -4,6 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Lob;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
 import jakarta.validation.constraints.Size;
@@ -15,11 +16,11 @@ public class Project {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+    @Lob
     private String url;
     @Size(min = 1, max = 50, message = "Debe contar con una longitud minima de 1 y maxima de 50 caracteres")
     private String title;
-
+    @Lob
     private String description;
 
     @Temporal(TemporalType.DATE)
