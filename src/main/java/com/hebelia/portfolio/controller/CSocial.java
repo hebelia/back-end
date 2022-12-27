@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("socrse") //localhost:8080/socrse route
+@RequestMapping("social") //localhost:8080/socrse route
 @CrossOrigin(origins = "http://localhost:4200")
 public class CSocial {
     //    alias

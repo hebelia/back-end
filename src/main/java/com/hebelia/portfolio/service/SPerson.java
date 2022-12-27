@@ -20,10 +20,10 @@ public class SPerson {
         List<Person> listPeople= perRep.findAll();
         return listPeople;
     }
-        public Person findPerson(long id) {
+    public Person findPerson(long id) {
 //        returns null if person is not found
-          Person per = perRep.findById(id).orElse(null);
-          return per;
+        Person per = perRep.findById(id).orElse(null);
+        return per;
     }
     public void createPerson(Person per) {
         perRep.save(per);
