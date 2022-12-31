@@ -1,5 +1,6 @@
 package com.hebelia.portfolio.entity;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -21,6 +22,7 @@ public class Project {
     @Size(min = 1, max = 50, message = "Debe contar con una longitud minima de 1 y maxima de 50 caracteres")
     private String title;
     @Lob
+    @Column(length=1000)
     private String description;
 
     @Temporal(TemporalType.DATE)
