@@ -34,9 +34,17 @@ public class SPerson {
     public void deletePerson(long id) {
         perRep.deleteById(id);
     }
-//    review
+
     public void updatePersonById(long id, Person per){
         perRep.save(per);
     }
 
+//    login method
+    public Person login(String email, String password){
+        List<Person> listPeople = perRep.findByEmailAndPassword(email,password);
+        if(!listPeople.isEmpty()){
+        return listPeople.get(0); // returns position 0 if the list is empty
+    }
+        return null;
+    }
 }

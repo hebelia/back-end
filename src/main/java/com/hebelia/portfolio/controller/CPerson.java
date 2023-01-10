@@ -23,6 +23,12 @@ public class CPerson {
     @Autowired
     SPerson perServ;
     
+//    login 
+    @PostMapping("auth/login")
+    public Person login(@RequestBody Person per){
+        return perServ.login(per.getEmail(), per.getPassword());
+    }
+    
     @GetMapping("/list")
     @ResponseBody
     public List <Person> viewPeople(){

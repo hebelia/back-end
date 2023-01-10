@@ -7,7 +7,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Lob;
-
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
@@ -35,17 +34,26 @@ public class Person {
     private String  banner;
 
     private String  license;
+    
+    @NotNull
+    private String email;
+    @NotNull
+    private String password;
+    
 
     public Person() {
     }
 
-    public Person(String fullname, String title, String pfp, String about, String banner, String license) {
+    public Person(String fullname, String title, String pfp, String about, String banner,
+            String license, String email, String password) {
         this.fullname = fullname;
         this.title = title;
         this.pfp = pfp;
         this.about = about;
         this.banner = banner;
         this.license = license;
+        this.email = email;
+        this.password = password;
     }
 
     public Long getId() {
@@ -102,6 +110,22 @@ public class Person {
 
     public void setLicense(String license) {
         this.license = license;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
     
     
