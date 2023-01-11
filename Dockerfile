@@ -1,5 +1,5 @@
 
-FROM amazoncorreto:17-alpine-jdk
+FROM amazoncorretto:17-alpine-jdk
 
 MAINTAINER hebelia
 
