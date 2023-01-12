@@ -16,8 +16,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("skill") //localhost:8080/skill route
-@CrossOrigin(origins = "http://localhost:4200")
+@RequestMapping("skill") //https://portfolio-frontend-hlr.web.app/skill route
+@CrossOrigin(origins = "https://portfolio-frontend-hlr.web.app")
 public class CSkill {
 
     //    alias

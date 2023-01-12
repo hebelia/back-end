@@ -16,8 +16,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController 
-@RequestMapping("person") //localhost:8080/person route
-@CrossOrigin(origins = "http://localhost:4200")
+@RequestMapping("person") //https://portfolio-frontend-hlr.web.app/person route
+@CrossOrigin(origins = "https://portfolio-frontend-hlr.web.app")
 public class CPerson {
 //    alias
     @Autowired

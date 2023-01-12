@@ -17,8 +17,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController 
-@RequestMapping("project") //localhost:8080/project route
-@CrossOrigin(origins = "http://localhost:4200")
+@RequestMapping("project") //https://portfolio-frontend-hlr.web.app/project route
+@CrossOrigin(origins = "https://portfolio-frontend-hlr.web.app")
 
 public class CProject {
     //    alias
