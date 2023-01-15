@@ -11,8 +11,8 @@
 <br />
 <div align="center">
   <a href="https://github.com/hebelia/front-end">
-    <img src="https://ibb.co/Y3pnBDs" alt="Logo" width="80" height="80">  
-    <img src="https://ibb.co/0n7Z6GX" alt="Logo">
+    <img src="src\assets\android-chrome-192x192.png" alt="Logo" width="80" height="80">  
+    <img src="src\assets\logo.png" alt="Logo">
   </a>
 
 <h1 align="center"> Proyecto Argentina Programa Portfolio Personal (BackEnd) </h1>
@@ -59,7 +59,9 @@ Se trata de una API REST realizada utilizando las tecnologías Java + Spring Boo
 
 <b>Diagrama Entidad - Relación (DER)</b> de base de datos:
 
-<img src="https://ibb.co/VB981Bw" style="max-width: 100%; display: inline-block;"/>
+  ![Diagrama Entidad Relación](/src/assets/DER.png)
+
+  ![Arquitectura Web del Portfolio](src\assets\arquitectura-web.png)
 
 > Para ver el **script** del back end del portfolio dirigirse a:
 > <a href="https://github.com/hebelia/front-end/blob/main/src/assets/img/portfolio-script.sql" target="_blank"> <br /> :link: Script </a></i>
@@ -112,6 +114,8 @@ hebeliaromeu@gmail.com
 <!--  -->
 
 <!-- IMAGES & MEDIA -->
+
+[der-url]:https://ibb.co/VB981Bw
 
 [portfolio-pc]:
 [portfolio-mobile]:
