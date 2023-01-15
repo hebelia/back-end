@@ -57,11 +57,19 @@ Se trata de una API REST realizada utilizando las tecnologías Java + Spring Boo
 
 <p align="right">( <a href="#readme-top"> ▲ </a> )</p>
 
-<b>Diagrama Entidad - Relación (DER)</b> de base de datos:
+<b>Diagrama Entidad - Relación (DER)</b> de la base de datos del **back end**:
+
+<div align="center" >
+
+  ![Arquitectura Web del Portfolio](src/assets/arquitectura-web.png)
+
+<i> ∆ nota: en este repositorio se encuentra desarrollada la parte resaltada</i>
 
   ![Diagrama Entidad Relación](/src/assets/DER.png)
 
-  ![Arquitectura Web del Portfolio](src/assets/arquitectura-web.png)
+  <i> ∆ nota: este diagrama lo realice inicialmente como parte de los desafios de modulo propuestos por el propgrama, mas adelante agregue los campos "email" y  "password" a la tabla "person" para crear los métodos de login.</i>
+
+</div>
 
 > Para ver el **script** del back end del portfolio dirigirse a:
 > <a href="https://github.com/hebelia/front-end/blob/main/src/assets/img/portfolio-script.sql" target="_blank"> <br /> :link: Script </a></i>
@@ -117,7 +125,4 @@ hebeliaromeu@gmail.com
 
 [der-url]:https://ibb.co/VB981Bw
 
-[portfolio-pc]:
-[portfolio-mobile]:
-[prtfolio-pc-admin]:
-[portfolio-mobile-admin]:
+
