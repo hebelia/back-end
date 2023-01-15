@@ -61,7 +61,7 @@ Se trata de una API REST realizada utilizando las tecnologías Java + Spring Boo
 
   ![Diagrama Entidad Relación](/src/assets/DER.png)
 
-  ![Arquitectura Web del Portfolio](src\assets\arquitectura-web.png)
+  ![Arquitectura Web del Portfolio](src/assets/arquitectura-web.png)
 
 > Para ver el **script** del back end del portfolio dirigirse a:
 > <a href="https://github.com/hebelia/front-end/blob/main/src/assets/img/portfolio-script.sql" target="_blank"> <br /> :link: Script </a></i>
