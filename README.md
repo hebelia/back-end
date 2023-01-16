@@ -55,23 +55,29 @@ Se trata de una API REST realizada utilizando las tecnologías Java + Spring Boo
 
   [![MySQL][mysql]][mysql-url]
 
+- <b>Deployment </b> de la base de datos y la API
+
+  [![Render][render.com]][render-url]
+
+  [![CleverCloud][clevercloud.com]][clevercloud-url]
+
 <p align="right">( <a href="#readme-top"> ▲ </a> )</p>
 
 <b>Diagrama Entidad - Relación (DER)</b> de la base de datos del **back end**:
 
 <div align="center" >
 
-  ![Arquitectura Web del Portfolio](src/assets/arquitectura-web.png)
+![Arquitectura Web del Portfolio](src/assets/arquitectura-web.png)
 
 <i> ∆ nota: en este repositorio se encuentra desarrollada la parte resaltada</i>
 
-  ![Diagrama Entidad Relación](/src/assets/DER.png)
+![Diagrama Entidad Relación](/src/assets/DER.png)
 
-  <i> ∆ nota: este diagrama lo realice inicialmente como parte de los desafios de modulo propuestos por el propgrama, mas adelante agregue los campos "email" y  "password" a la tabla "person" para crear los métodos de login.</i>
+<i> ∆ nota: este diagrama lo realice inicialmente como parte de los desafios de modulo propuestos por el propgrama, mas adelante agregue los campos "email" y "password" a la tabla "person" para crear los métodos de login.</i>
 
 </div>
 
-> Para ver el **script** del back end del portfolio dirigirse a:
+> Para ver el **script** de la base de datos dirigirse a:
 > <a href="https://github.com/hebelia/front-end/blob/main/src/assets/img/portfolio-script.sql" target="_blank"> <br /> :link: Script </a></i>
 
 <p align="right">( <a href="#readme-top"> ▲ </a> )</p>
@@ -91,7 +97,6 @@ hebeliaromeu@gmail.com
 <h3>
 
 <p align="right">(<a href="#readme-top"> ▲ </a>)</p>
-
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
@@ -118,11 +123,13 @@ hebeliaromeu@gmail.com
 [mysql-url]: https://www.mysql.com
 [spring.io]: https://img.shields.io/badge/SpringBoot-4A4A55?style=for-the-badge&logo=springboot&colorR=555
 [springboot-url]: https://spring.io/projects/spring-boot
+[render.com]: https://img.shields.io/badge/Render-4A4A55?style=for-the-badge&logo=render&colorR=555
+[render-url]: https://render.com
+[clevercloud.com]: https://img.shields.io/badge/CleverCloud-4A4A55?style=for-the-badge&logo=clevercloud&colorN=555
+[clevercloud-url]: https://clever-cloud.com
 
 <!--  -->
 
 <!-- IMAGES & MEDIA -->
 
-[der-url]:https://ibb.co/VB981Bw
-
-
+[der-url]: https://ibb.co/VB981Bw
